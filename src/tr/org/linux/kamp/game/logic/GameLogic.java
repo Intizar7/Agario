@@ -127,6 +127,7 @@ public class GameLogic {
 			}
 
 			if (gameObject instanceof Enemy) {
+				//
 				Enemy enemy = (Enemy) gameObject;
 
 				for (GameObject gameObject2 : gameObjects) {
@@ -149,7 +150,7 @@ public class GameLogic {
 		gameObjects.removeAll(minesToRemove);
 		gameObjects.removeAll(enemiesToRemove);
 }
-	private synchronized void addNewObjects() {
+	private synchronized void addNewObjects() {//yenilen mayın yem için yenilerini ekliyoruz
 		fillChips(chipsToRemove.size());
 		fillMines(minesToRemove.size());
 		fillEnemies(enemiesToRemove.size());
@@ -297,7 +298,7 @@ public class GameLogic {
 
 	private void startGame() {
 		new Thread(new Runnable() {
-
+//thread'in amacı iş parçacıkları 
 			@Override
 			public void run() {
 				while (isgamerunning) {
